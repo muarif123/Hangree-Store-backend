@@ -14,9 +14,9 @@ app.use(cors())
 app.use("/",userRouter)
 app.use("/",dashboardRouter)
 
-app.post("/signupdata",async(req,res)=>{
-    console.log(req.body,"Backend body")
-})
+// app.post("/signupdata",async(req,res)=>{
+//     console.log(req.body,"Backend body")
+// })
 
 app.get("/",(req,res)=>{
     res.send("Server running")
