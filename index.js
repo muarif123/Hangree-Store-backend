@@ -5,12 +5,14 @@ const connection=require("./Connection/connection")
 const dotenv=require("dotenv")
 dotenv.config({path:"./.env"})
 const userRouter=require("./Routers/userRouter")
+const dashboardRouter=require("./Routers/dashboardRouter")
 
 connection()
 app.use(express.json())
 app.use(cors())
 
 app.use("/",userRouter)
+app.use("/",dashboardRouter)
 
 app.post("/signupdata",async(req,res)=>{
     console.log(req.body,"Backend body")

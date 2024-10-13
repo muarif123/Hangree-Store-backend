@@ -54,4 +54,8 @@ const changingPassword = async (req, res) => {
     }
 }
 
-module.exports = { signupController, signinController, changingPassword }
+const tokenController=(req,res)=>{
+    console.log(req.body,"TTTTTTTTTTTTTTTTTTTTTTTTTTTTt")
+}
+
+module.exports = { signupController, signinController, changingPassword,tokenController }
