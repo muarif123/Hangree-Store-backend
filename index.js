@@ -9,7 +9,9 @@ const dashboardRouter=require("./Routers/dashboardRouter")
 
 connection()
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: 'https://hangree-shopping-store.vercel.app/'
+}));
 
 app.use("/",userRouter)
 app.use("/",dashboardRouter)
